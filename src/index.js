@@ -2,6 +2,7 @@ require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
 const mahasiswaRoutes = require("./routes/mahasiswaRoutes");
+const matkulRoutes = require("./routes/matkulRoutes");
 
 const app = express();
 const PORT = 4000;
@@ -23,5 +24,9 @@ db.once("open", function () {
 });
 
 app.use("/api/mahasiswa", mahasiswaRoutes);
+app.use("/api/matkul", matkulRoutes);
+app.get("/", (req, res) => {
+  res.send("Hello World!");
+});
 
 app.listen(PORT, () => console.log(`🚀 Server started at port:${PORT}`));
