@@ -3,6 +3,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const mahasiswaRoutes = require("./routes/mahasiswaRoutes");
 const matkulRoutes = require("./routes/matkulRoutes");
+const enrollmentRoutes = require("./routes/enrollmentRoutes");
 
 const app = express();
 const PORT = 4000;
@@ -25,6 +26,7 @@ db.once("open", function () {
 
 app.use("/api/mahasiswa", mahasiswaRoutes);
 app.use("/api/matkul", matkulRoutes);
+app.use("/api/enrollments", enrollmentRoutes); // Register enrollment routes
 app.get("/", (req, res) => {
   res.send("Hello World!");
 });
