@@ -26,7 +26,7 @@ db.once("open", function () {
 
 app.use("/api/mahasiswa", mahasiswaRoutes);
 app.use("/api/matkul", matkulRoutes);
-app.use("/api/enrollments", enrollmentRoutes); // Register enrollment routes
+app.use("/api/enrollments", enrollmentRoutes); 
 app.get("/", (req, res) => {
   res.send("Hello World!");
 });
