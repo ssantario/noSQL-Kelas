@@ -13,7 +13,7 @@ Before running this project, ensure you have the following installed on your dev
 1. ### **Clone the Repository**  
    Clone this repository to your local machine:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/ssantario/noSQL-Kelas.git
    cd noSQL-Kelas
 2. ### **Install dependencies**
    
