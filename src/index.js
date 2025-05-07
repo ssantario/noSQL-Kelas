@@ -6,6 +6,8 @@ const mahasiswaRoutes = require("./routes/mahasiswaRoutes");
 const app = express();
 const PORT = 4000;
 
+console.log("MONGO_URL:", process.env.MONGO_URL);
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 

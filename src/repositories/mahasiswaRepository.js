@@ -9,17 +9,19 @@ const getAllMahasiswa = async () => {
   return await User.find();
 };
 
-const updateMahasiswaById = async (id, data) => {
-  return await User.findByIdAndUpdate(id, data, { new: true });
+// Update mahasiswa by their NPM
+const updateMahasiswaByNPM = async (npm, data) => {
+  return await User.findOneAndUpdate({ npm }, data, { new: true }); // Query by npm
 };
 
-const deleteMahasiswaById = async (id) => {
-  return await User.findByIdAndDelete(id);
+// Delete mahasiswa by their NPM
+const deleteMahasiswaByNPM = async (npm) => {
+  return await User.findOneAndDelete({ npm }); // Query by npm
 };
 
 module.exports = {
   addMahasiswa,
   getAllMahasiswa,
-  updateMahasiswaById,
-  deleteMahasiswaById,
+  updateMahasiswaByNPM,
+  deleteMahasiswaByNPM,
 };

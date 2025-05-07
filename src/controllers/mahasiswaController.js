@@ -1,14 +1,28 @@
 const mahasiswaRepository = require("../repositories/mahasiswaRepository");
 
 const addMahasiswa = async (req, res) => {
-  const { name, npm, jurusan } = req.body;
+  const { name, npm, jurusan, IPK, semester } = req.body; // Include IPK and semester
   try {
-    const user = await mahasiswaRepository.addMahasiswa({ name, npm, jurusan });
+    const user = await mahasiswaRepository.addMahasiswa({
+      name,
+      npm,
+      jurusan,
+      IPK,
+      semester,
+    });
     res
       .status(201)
       .json({ message: "Data Mahasiswa berhasil ditambahkan", data: user });
   } catch (err) {
-    res.status(400).send(err);
+    if (err.code === 11000) {
+      // Handle duplicate key error
+      res.status(400).json({
+        message: "NPM already exists in the database",
+        field: "npm",
+      });
+    } else {
+      res.status(400).send(err);
+    }
   }
 };
 
@@ -21,14 +35,16 @@ const getMahasiswa = async (req, res) => {
   }
 };
 
+// Update mahasiswa by their NPM
 const updateMahasiswa = async (req, res) => {
-  const { id } = req.params;
-  const { name, npm, jurusan } = req.body;
+  const { npm } = req.params; // Get npm from the request parameters
+  const { name, jurusan, IPK, semester } = req.body; // Include all updatable fields
   try {
-    const updatedUser = await mahasiswaRepository.updateMahasiswaById(id, {
+    const updatedUser = await mahasiswaRepository.updateMahasiswaByNPM(npm, {
       name,
-      npm,
       jurusan,
+      IPK,
+      semester,
     });
     if (!updatedUser) {
       return res.status(404).json({ message: "Mahasiswa not found" });
@@ -42,10 +58,11 @@ const updateMahasiswa = async (req, res) => {
   }
 };
 
+// Delete mahasiswa by their NPM
 const deleteMahasiswa = async (req, res) => {
-  const { id } = req.params;
+  const { npm } = req.params; // Get npm from the request parameters
   try {
-    const deletedUser = await mahasiswaRepository.deleteMahasiswaById(id);
+    const deletedUser = await mahasiswaRepository.deleteMahasiswaByNPM(npm);
     if (!deletedUser) {
       return res.status(404).json({ message: "Mahasiswa not found" });
     }
