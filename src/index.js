@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 const mahasiswaRoutes = require("./routes/mahasiswaRoutes");
 const matkulRoutes = require("./routes/matkulRoutes");
 const enrollmentRoutes = require("./routes/enrollmentRoutes");
+const jadwalRoutes = require("./routes/jadwalRoutes");
 
 const app = express();
 const PORT = 4000;
@@ -27,6 +28,7 @@ db.once("open", function () {
 app.use("/api/mahasiswa", mahasiswaRoutes);
 app.use("/api/matkul", matkulRoutes);
 app.use("/api/enrollments", enrollmentRoutes); 
+app.use("/api/jadwal", jadwalRoutes);
 app.get("/", (req, res) => {
   res.send("Hello World!");
 });
