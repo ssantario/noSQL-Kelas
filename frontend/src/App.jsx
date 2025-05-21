@@ -44,7 +44,7 @@ function Navigation() {
       <div className="container mx-auto px-4 py-3">
         <div className="flex justify-between items-center">          <Link to="/" className="flex items-center space-x-2">
             <img src={logoUI} alt="UI Logo" className="w-8 h-8" />
-            <h1 className="text-xl text-white font-bold">SIAK UI</h1>
+            <h1 className="text-xl text-white font-bold">SIRSAK UI</h1>
           </Link>
           <div className="flex space-x-2">
             <NavLink to="/">Home</NavLink>
@@ -160,7 +160,7 @@ function HomePage() {
     <div className="max-w-6xl mx-auto">
       <div className="text-center mb-16">
         <h1 className="text-4xl font-bold text-gray-800 mb-4">
-          Welcome to SIAK UI
+          Welcome to SIRSAK UI
         </h1>
         <p className="text-xl text-gray-600 max-w-2xl mx-auto">
           A comprehensive system for managing student enrollments, courses, and academic records at the University of Indonesia.
