@@ -163,25 +163,26 @@ function HomePage() {
           Welcome to SIRSAK UI
         </h1>
         <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-          A comprehensive system for managing student enrollments, courses, and academic records at the University of Indonesia.
+          Sistem Informasi Akademis Universitas Indonesia
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-8 justify-center">
         {cards.map((card, index) => (
           <Link
             key={index}
             to={card.to}
-            className="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+            className="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex flex-col items-center"
           >
-            <div className="text-center">
+            <div className="text-center flex flex-col items-center">
               {card.icon}
               <h2 className="text-xl font-semibold mb-3 text-gray-800">{card.title}</h2>
               <p className="text-gray-600">{card.description}</p>
             </div>
           </Link>
         ))}
-      </div>      <div className="mt-16 bg-ui-light/20 border border-ui-light p-8 rounded-xl">
+      </div>
+      <div className="mt-16 bg-ui-light/20 border border-ui-light p-8 rounded-xl">
         <h2 className="text-2xl font-semibold text-ui-dark mb-4">Quick Stats</h2>
         {error && (
           <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4">
