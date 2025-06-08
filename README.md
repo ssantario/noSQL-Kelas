@@ -1,3 +1,12 @@
+# Kelompok 9
+
+## Anggota Kelompok
+
+ * Audy Natalie Cecilia R (2306266962)
+ * Muhammad Raditya Alif Nugroho (2306212745)
+ * Fadhlureza Sebastian (2306161971)
+ * Rivi Yasha Hafizhan (2306250535)
+ 
 # Cara Menjalankan Aplikasi dengan Docker
 
 ## Prasyarat
@@ -51,3 +60,31 @@
         ```bash
         docker compose down
         ```
+
+
+# SIRSak UI - Sistem Informasi Akademis Universitas Indonesia
+
+SIRSak UI adalah aplikasi berbasis web yang digunakan untuk mengelola berbagai informasi akademis di Universitas Indonesia. Aplikasi ini memungkinkan pengelolaan data mahasiswa, mata kuliah, pendaftaran, dan jadwal kuliah dengan antarmuka yang mudah digunakan.
+
+## Fitur Utama:
+
+### 1. **Manage Students**
+
+Fitur ini memungkinkan pengelolaan data mahasiswa, termasuk menambah, memperbarui, dan melacak informasi mahasiswa. Kita bisa melihat data seperti nama, NPM, jurusan, IPK, dan semester mahasiswa.
+
+### 2. **Manage Courses**
+
+Fitur ini digunakan untuk membuat dan mengelola mata kuliah yang tersedia di Universitas Indonesia. Pengguna dapat menambahkan informasi seperti kode mata kuliah, nama mata kuliah, dan jumlah SKS (Satuan Kredit Semester).
+
+### 3. **Manage Enrollments**
+
+Fitur ini digunakan untuk melacak pendaftaran mata kuliah oleh mahasiswa. Data yang tercatat termasuk mahasiswa yang terdaftar, mata kuliah yang diambil, nilai yang diperoleh, serta tanggal pendaftaran.
+
+### 4. **Manage Schedule**
+
+Dengan fitur ini, pengelola akademik dapat mengatur jadwal mata kuliah, waktu perkuliahan, serta penjadwalan ruang kuliah. Hal ini bertujuan untuk memudahkan pengelolaan jadwal bagi mahasiswa dan pengajar.
+
+## Statistik SIRSAK UI
+
+Pada halaman utama, terdapat *Quick Stats* yang menunjukkan statistik singkat mengenai jumlah mahasiswa, mata kuliah aktif, serta pendaftaran.
+
