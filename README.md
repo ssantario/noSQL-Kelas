@@ -85,6 +85,5 @@ Fitur ini digunakan untuk melacak pendaftaran mata kuliah oleh mahasiswa. Data y
 Dengan fitur ini, pengelola akademik dapat mengatur jadwal mata kuliah, waktu perkuliahan, serta penjadwalan ruang kuliah. Hal ini bertujuan untuk memudahkan pengelolaan jadwal bagi mahasiswa dan pengajar.
 
 ## Statistik SIRSAK UI
-
 Pada halaman utama, terdapat *Quick Stats* yang menunjukkan statistik singkat mengenai jumlah mahasiswa, mata kuliah aktif, serta pendaftaran.
-
+![image](https://hackmd.io/_uploads/r1-ksm77ee.png)
